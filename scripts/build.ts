@@ -11,4 +11,5 @@ import { mkdirSync } from "fs";
 import { dirname } from "path";
 mkdirSync(dirname(output), { recursive: true });
 await Bun.write(output, pdf);
+await Bun.write(resolve("dist/index.html"), Bun.file(resolve("index.html")));
 console.log(`Built ${output}`);

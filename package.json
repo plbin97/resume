@@ -6,7 +6,7 @@
   "scripts": {
     "build": "bun run scripts/build.ts",
     "watch": "bun run scripts/watch.ts",
-    "serve": "browser-sync start --server dist --files 'dist/resume.pdf' --startPath resume.pdf --no-open",
+    "serve": "browser-sync start --server dist --files 'dist/**/*'",
     "dev": "concurrently -n typst,serve \"bun run watch\" \"bun run serve\"",
     "clean": "rm -rf dist"
   },
