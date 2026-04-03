@@ -3,7 +3,7 @@ import { watch, mkdirSync } from "fs";
 import { dirname } from "path";
 import { resolve } from "path";
 
-const entry = resolve("resume.typ");
+const entry = resolve("src/resume.typ");
 const output = resolve("dist/resume.pdf");
 
 function build() {
@@ -21,7 +21,7 @@ function build() {
 mkdirSync(dirname(output), { recursive: true });
 build();
 console.log("Watching for changes...");
-watch(resolve("."), { recursive: true }, (_event, filename) => {
+watch(resolve("src"), { recursive: true }, (_event, filename) => {
   if (filename && filename.endsWith(".typ")) {
     build();
   }

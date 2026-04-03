@@ -1,7 +1,7 @@
 import { NodeCompiler } from "@myriaddreamin/typst-ts-node-compiler";
 import { resolve } from "path";
 
-const entry = resolve("resume.typ");
+const entry = resolve("src/resume.typ");
 const output = resolve("dist/resume.pdf");
 
 const compiler = NodeCompiler.create({ workspace: resolve(".") });
