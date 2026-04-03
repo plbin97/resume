@@ -1,6 +1,8 @@
 # Resume
 
-My resume, built with [Typst](https://typst.app/) and compiled via [typst.ts](https://github.com/Myriad-Dreamin/typst.ts).
+My resume, built with [Typst](https://typst.app/).
+
+**View online:** https://plbin97.github.io/resume/
 
 ## Prerequisites
 
