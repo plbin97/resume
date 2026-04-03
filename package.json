@@ -1,0 +1,30 @@
+{
+  "name": "resume",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "bun run scripts/build.ts",
+    "watch": "bun run scripts/watch.ts",
+    "serve": "browser-sync start --server dist --files 'dist/resume.pdf' --startPath resume.pdf --no-open",
+    "dev": "concurrently -n typst,serve \"bun run watch\" \"bun run serve\"",
+    "clean": "rm -rf dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/plbin97/resume.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/plbin97/resume/issues"
+  },
+  "homepage": "https://github.com/plbin97/resume#readme",
+  "devDependencies": {
+    "@myriaddreamin/typst-ts-node-compiler": "^0.7.0-rc2",
+    "browser-sync": "^3.0.4",
+    "concurrently": "^9.2.1"
+  }
+}
