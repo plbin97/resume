@@ -23,7 +23,6 @@
   },
   "homepage": "https://github.com/plbin97/resume#readme",
   "devDependencies": {
-    "@myriaddreamin/typst-ts-node-compiler": "^0.7.0-rc2",
     "browser-sync": "^3.0.4",
     "concurrently": "^9.2.1"
   }

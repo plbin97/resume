@@ -1,6 +1,6 @@
 // ---- Page & font setup ----
 #set page(margin: (x: 1.2cm, y: 1.2cm), paper: "us-letter")
-#set text(font: "New Computer Modern", size: 10pt)
+#set text(font: "Geist", size: 10pt)
 #set par(justify: true, leading: 0.6em)
 
 // ---- Helper functions ----

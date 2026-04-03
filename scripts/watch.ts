@@ -1,24 +1,20 @@
-import { NodeCompiler } from "@myriaddreamin/typst-ts-node-compiler";
-import { watch, mkdirSync } from "fs";
-import { dirname } from "path";
 import { resolve } from "path";
+import { watch, mkdirSync } from "fs";
 
 const entry = resolve("src/resume.typ");
 const output = resolve("dist/resume.pdf");
+const fontPath = resolve("src/fonts");
 
 function build() {
-  try {
-    const compiler = NodeCompiler.create({ workspace: resolve(".") });
-    const pdf = compiler.pdf({ mainFilePath: entry });
-    Bun.write(output, pdf);
+  const proc = Bun.spawnSync(["typst", "compile", "--font-path", fontPath, entry, output]);
+  if (proc.exitCode !== 0) {
+    console.error(`[${new Date().toLocaleTimeString()}] Error:`, proc.stderr.toString());
+  } else {
     console.log(`[${new Date().toLocaleTimeString()}] Built ${output}`);
-  } catch (err: unknown) {
-    const message = err instanceof Error ? err.message : String(err);
-    console.error(`[${new Date().toLocaleTimeString()}] Error:`, message);
   }
 }
 
-mkdirSync(dirname(output), { recursive: true });
+mkdirSync(resolve("dist"), { recursive: true });
 build();
 console.log("Watching for changes...");
 watch(resolve("src"), { recursive: true }, (_event, filename) => {
