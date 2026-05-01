@@ -45,19 +45,19 @@
   [Nov 2022 -- May 2026],
 )
 - *7GG* -- 7Now client for gamers
-  - Led a team to design and develop the 7Now ordering client tailored for gamers
-  - Partnered with the Overwolf team to build an Angular + Electron desktop client and delivered it to the 7Now team
+  - Led a team to design and build the 7Now ordering client for gamers (MVP in development)
+  - Partnered with the Overwolf team to ship an Angular + Electron desktop client to the 7Now team
   - Tech stack: Angular, Electron, NestJS, Nx, TypeScript
 - *Slurpee UI* -- centralized component library
-  - Led a team to design and develop a shared UI component library used across 7-Eleven products
-  - Delivered Slurpee-React, Slurpee-Angular, and Slurpee-Next packages to the 7Now and EDP teams
+  - Led a team to architect and build a shared UI component library spanning 30+ components
+  - Shipped Slurpee-React, Slurpee-Angular, and Slurpee-Next packages adopted by the 7Now and EDP teams
   - Tech stack: Stencil, Nx, Angular, React, TypeScript, Sass
 - *Tabasco* -- Tablet-Based Self Checkout
-  - Designed and developed new features for 7-Eleven's tablet-based self-checkout experience
-  - Delivered self-checkout features for Speedway
+  - Built new features for 7-Eleven's tablet-based self-checkout, deployed to 3,000+ stores and processing millions of transactions
+  - Shipped self-checkout features for Speedway
   - Tech stack: React Native, Android SDK, TypeScript, Java
 - *7IoT* -- IoT data platform for 7-Eleven stores
-  - Designed and developed the 7IoT platform to collect and analyze telemetry from 7-Eleven stores
+  - Architected the 7IoT platform to collect and analyze store telemetry, rolled out to 100+ stores
   - Owned 7Snapshot, the IoT device onboarding system
   - Tech stack: React, Express, JavaScript
 
@@ -68,8 +68,8 @@
   [Mar 2019 -- Sep 2019],
 )
 - Analyzed requirements and designed an open knowledge platform in collaboration with NJIT professors and PhD researchers
-- Developed a web-based data analysis pipeline for Geoinformatics researchers
-- Secured funding from the National Science Foundation (NSF)
+- Built a web-based data analysis pipeline for Geoinformatics researchers
+- Project sponsored by the National Science Foundation (NSF)
 - Tech stack: Python, Flask, React, Express, MongoDB
 
 #v(6pt)
@@ -78,7 +78,7 @@
   [*Founder & Software Engineer* -- Qingnai Network Technology Co. Ltd., Shenzhen, China],
   [Jan 2016 -- Oct 2019],
 )
-- Designed and developed ThatSeed, a VPN service for consumers
+- Built ThatSeed, a consumer VPN service
 - Led a team to build the VPN network relay system, PHP backend, Kotlin-based Android client, and a web frontend built on Qingnai's in-house frontend framework
 - Grew the product to 22,000+ registered users and 1,500+ daily active users
 - Tech stack: PHP, JavaScript, Node.js, Go, Kotlin
@@ -110,5 +110,5 @@
   [],
 )
 - A ranking and session management platform for badminton clubs, used by the majority of badminton clubs in the Dallas area
-- Vibe coded with TypeScript, React, Elysia, Drizzle, Bun, Postgres, Railway
+- Built solo with TypeScript, React, Elysia, Drizzle, Bun, Postgres, Railway
 
