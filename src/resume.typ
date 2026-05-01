@@ -42,7 +42,7 @@
 #section("Experience")
 
 #entry(
-  [*Full Stack Engineer* -- 7-Eleven R&D, Irving, TX],
+  [*Senior Full Stack Engineer* -- 7-Eleven R&D, Irving, TX],
   [Nov 2022 -- May 2026],
 )
 - *7GG* -- 7Now client for gamers
