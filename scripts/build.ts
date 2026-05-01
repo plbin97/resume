@@ -14,5 +14,7 @@ if (proc.exitCode !== 0) {
   process.exit(1);
 }
 
-await Bun.write(resolve("dist/index.html"), Bun.file(resolve("index.html")));
-console.log(`Built ${output}`);
+const pkg = await Bun.file(resolve("package.json")).json();
+const html = await Bun.file(resolve("index.html")).text();
+await Bun.write(resolve("dist/index.html"), html.replaceAll("{{VERSION}}", pkg.version));
+console.log(`Built ${output} (v${pkg.version})`);
