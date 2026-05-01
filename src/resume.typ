@@ -1,7 +1,9 @@
 // ---- Page & font setup ----
-#set page(margin: (x: 1.2cm, y: 1.2cm), paper: "us-letter")
+#set page(margin: (x: 1.0cm, y: 1.0cm), paper: "us-letter")
 #set text(font: "Geist", size: 10pt)
 #set par(justify: true, leading: 0.6em)
+#show list: set block(spacing: 0.7em)
+#set list(spacing: 0.55em, indent: 0.6em)
 
 // ---- Helper functions ----
 #let header-rule() = {
@@ -11,7 +13,7 @@
 }
 
 #let section(title) = {
-  v(6pt)
+  v(3pt)
   text(size: 11pt, weight: "bold", upper(title))
   header-rule()
 }
@@ -27,11 +29,11 @@
   #text(size: 20pt, weight: "bold")[Linbin Pang]
   #v(-6pt)
   #text(size: 10pt)[
-    #link("mailto:i@teenet.me")[i\@teenet.me] |
+    #link("mailto:linbinpang@gmail.com")[linbinpang\@gmail.com] |
     (973) 752-2776 |
     Irving, TX |
-    #link("https://www.teenet.me")[teenet.me] |
-    #link("https://www.linkedin.com/in/linbin-pang-724a90113")[LinkedIn]
+    #link("https://www.linkedin.com/in/linbin-pang-724a90113")[LinkedIn] |
+    #link("https://github.com/plbin97")[GitHub]
   ]
 ]
 
@@ -40,69 +42,73 @@
 
 #entry(
   [*Full Stack Engineer* -- 7-Eleven R&D, Irving, TX],
-  [_TODO_ -- Present],
+  [Nov 2022 -- May 2026],
 )
-- _TODO: Add bullet points describing your role, responsibilities, and achievements at 7-Eleven._
+- *7GG* -- 7Now client for gamers
+  - Led a team to design and develop the 7Now ordering client tailored for gamers
+  - Partnered with the Overwolf team to build an Angular + Electron desktop client and delivered it to the 7Now team
+  - Tech stack: Angular, Electron, NestJS, Nx, TypeScript
+- *Slurpee UI* -- centralized component library
+  - Led a team to design and develop a shared UI component library used across 7-Eleven products
+  - Delivered Slurpee-React, Slurpee-Angular, and Slurpee-Next packages to the 7Now and EDP teams
+  - Tech stack: Stencil, Nx, Angular, React, TypeScript, Sass
+- *Tabasco* -- Tablet-Based Self Checkout
+  - Designed and developed new features for 7-Eleven's tablet-based self-checkout experience
+  - Delivered self-checkout features for Speedway
+  - Tech stack: React Native, Android SDK, TypeScript, Java
+- *7IoT* -- IoT data platform for 7-Eleven stores
+  - Designed and developed the 7IoT platform to collect and analyze telemetry from 7-Eleven stores
+  - Owned 7Snapshot, the IoT device onboarding system
+  - Tech stack: React, Express, JavaScript
 
-#v(4pt)
+#v(6pt)
 
 #entry(
   [*Software Engineer* -- NJIT Department of Informatics, Newark, NJ],
   [Mar 2019 -- Sep 2019],
 )
-- Developed an NSF-funded drag-and-drop data processing platform using microservice architecture and agile methodology
-- Built the platform with Node.js, Express.js, MongoDB, React.js, Webpack, and Babel
-- Collaborated with research teams to deliver tools for data analysis workflows
+- Analyzed requirements and designed an open knowledge platform in collaboration with NJIT professors and PhD researchers
+- Developed a web-based data analysis pipeline for Geoinformatics researchers
+- Secured funding from the National Science Foundation (NSF)
+- Tech stack: Python, Flask, React, Express, MongoDB
 
-#v(4pt)
+#v(6pt)
 
 #entry(
-  [*Founder & Full Stack Engineer* -- Qingnai Network Technology Co. Ltd., Shenzhen, China],
+  [*Founder & Software Engineer* -- Qingnai Network Technology Co. Ltd., Shenzhen, China],
   [Jan 2016 -- Oct 2019],
 )
-- Founded ThatSeed, a network accelerator service that grew to 22,000+ users and 1,500+ daily active users
-- Built user management, billing, and traffic relay systems from the ground up
-- Implemented high-concurrency architecture with load balancing to handle peak traffic
+- Designed and developed ThatSeed, a VPN service for consumers
+- Led a team to build the VPN network relay system, PHP backend, Kotlin-based Android client, and a web frontend built on Qingnai's in-house frontend framework
+- Grew the product to 22,000+ registered users and 1,500+ daily active users
+- Tech stack: PHP, JavaScript, Node.js, Go, Kotlin
 
 // ---- Education ----
 #section("Education")
 
 #entry(
-  [*Trine University*],
+  [*Trine University* -- Master of Science in Information Studies],
   [2025 -- 2026],
 )
-_TODO: Add degree and field of study._
-
-#v(4pt)
-
 #entry(
-  [*New Jersey Institute of Technology* -- Informatics],
+  [*New Jersey Institute of Technology* -- Bachelor of Science in Web and Information Systems],
   [2017 -- 2022],
 )
 
 // ---- Skills ----
 #section("Skills")
 
-*Languages:* JavaScript (ES5/ES6), Python, Java, PHP \
-*Frontend:* React, Redux, Webpack, Babel \
-*Backend:* Node.js, Express.js, Nginx, MongoDB, MySQL, WebSocket, WebRTC \
-*DevOps & Tools:* Docker, CircleCI, Linux, Git, RESTful APIs \
-*CMS:* WordPress, Drupal, Ghost
+*Expert:* TypeScript, React/Next, Node/Bun, Elysia, Express, Postgres, Prisma/Drizzle, Nx Monorepo, Claude Code \
+*Advanced:* Electron, React Native, Angular, AWS, MongoDB, Stencil, Sass, Python \
+*Familiar:* Android SDK (Kotlin/Java), PHP, NestJS, Go
 
-// ---- Projects ----
-#section("Projects")
+// ---- Side Projects ----
+#section("Side Projects")
 
 #entry(
-  [*ThatSeed* -- Network Acceleration Service],
-  [2016 -- 2019],
-)
-- Built a full-stack platform with user management, billing, and traffic relay serving 22,000+ users
-- Designed high-availability infrastructure with load balancing and traffic routing
-
-#v(4pt)
-
-#entry(
-  [*Funny Nation* -- Discord Bot],
+  [*#link("https://playbadminton.app")[playbadminton.app]*],
   [],
 )
-- Developed a multi-server Discord bot for community engagement
+- A ranking and session management platform for badminton clubs, used by the majority of badminton clubs in the Dallas area
+- Vibe coded with TypeScript, React, Elysia, Drizzle, Bun, Postgres, Railway
+
