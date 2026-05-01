@@ -4,6 +4,7 @@
 #set par(justify: true, leading: 0.6em)
 #show list: set block(spacing: 0.7em)
 #set list(spacing: 0.55em, indent: 0.6em)
+#show link: underline
 
 // ---- Helper functions ----
 #let header-rule() = {
