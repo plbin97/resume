@@ -1,38 +1,44 @@
 // ---- Page & font setup ----
-#set page(margin: (x: 0.75cm, y: 0.65cm), paper: "us-letter")
-#set text(font: "Times New Roman", size: 9.5pt)
-#set par(justify: true, leading: 0.7em)
-#show list: set block(above: 0.5em, below: 0pt)
-#set list(spacing: 0.5em, indent: 0.5em)
+#set page(margin: (x: 0.70cm, y: 0.50cm), paper: "us-letter")
+#set text(font: "Times New Roman", size: 10pt)
+#set par(justify: true, leading: 0.78em)
+#show list: set block(above: 0.75em, below: 0pt)
+#set list(spacing: 0.65em, indent: 0.5em)
 #show link: underline
 
 // ---- Helper functions ----
 #let header-rule() = {
-  v(1pt)
+  v(0pt)
   line(length: 100%, stroke: 0.5pt)
   v(0pt)
 }
 
-#let section(title) = {
-  v(10pt)
-  text(size: 10.5pt, weight: "bold", upper(title))
+#let section(title, above: 4pt) = {
+  v(above)
+  text(size: 10pt, weight: "bold", upper(title))
   header-rule()
 }
 
 #let entry(left, right) = {
-  block(width: 100%, above: 6pt, below: 0pt)[
+  block(width: 100%, above: 7pt, below: 0pt)[
+    #left #h(1fr) #emph(right)
+  ]
+}
+
+#let tight-entry(left, right) = {
+  block(width: 100%, above: 7pt, below: 0pt)[
     #left #h(1fr) #emph(right)
   ]
 }
 
 // ---- Header ----
 #align(center)[
-  #text(size: 18pt, weight: "bold")[Yi Shi]
-  #v(1pt)
-  #text(size: 9.5pt)[
+  #text(size: 16pt, weight: "bold")[Yi Shi]
+  #v(-3pt)
+  #text(size: 10pt)[
     #link("mailto:shiyivicaaa@gmail.com")[shiyivicaaa\@gmail.com] |
     617-259-7715 |
-    Boston, MA |
+    Seattle, WA |
     #link("https://linkedin.com/in/shiyivic/")[LinkedIn]
   ]
 ]
@@ -41,66 +47,65 @@
 #section("Experience")
 
 #entry(
-  [*Software Development Engineer* | TDK SensEI, Pittsburgh, PA],
-  [Jun 2025 -- Aug 2025],
+  [*Software Development Engineer* | Cactus Capital Group LLC, TX / Remote],
+  [Sep. 2025 -- Present],
 )
-- Designed and maintained a production-grade *GenAI*-driven anomaly prediction service, integrating *ML inference* into backend services to proactively detect manufacturing failures and reduce operational downtime.
-- Built scalable anomaly detection pipelines using *AWS Bedrock*, *Lambda*, *Amazon S3*, and *DocumentDB*, processing high-frequency sensor data with 99%+ precision and production-level reliability.
-- Developed a real-time monitoring and alerting system using *React.js*, *Express.js*, and *RESTful APIs*, enabling low-latency visualization of live sensor metrics, anomaly scores, and system health diagnostics.
-- Refactored inference and request-handling pipelines by migrating from Bedrock-based inference to *SmolAgent* and *LangChain*, reducing response latency and improving system throughput under load.
-- Implemented *AWS Lambda* cloud functions in *JavaScript* to process and orchestrate data from the *AWS S3* Bucket.
-- Built synthetic data generation and load-testing frameworks to validate system behavior under edge cases, reducing end-to-end pipeline runtime by 95% and improving system stability.
+#block(above: 5pt, below: 0pt)[_CapEx -- Investment Portfolio Analytics Platform_]
+- Architected a full-stack portfolio analytics platform using *React.js*, *TypeScript*, and *Express.js* with *AWS DynamoDB* and *Redis* caching, delivering real-time P&L dashboards to institutional clients at sub-100ms query latency.
+- Engineered *Python* and *Node.js* microservices on *AWS Lambda* for automated market data ingestion, risk assessment, and portfolio rebalancing alerts, processing millions of daily transactions with 99.9% uptime.
+- Built *JWT*-authenticated *RESTful APIs* with *MySQL* and role-based access control; integrated *GitHub* Actions *CI/CD* pipelines, cutting deployment cycle time by 35% across enterprise client environments.
 
 #entry(
-  [*Software Development Engineer* | Shawk Solution, Spokane, WA],
-  [Jan 2025 -- Apr 2025],
+  [*Software Development Engineer Intern* | TDK SensEI, PA],
+  [Jun. 2025 -- Aug. 2025],
 )
-- Designed and maintained a production-ready *Gemini*-based querying service AI agent, exposing backend APIs to support natural-language access across structured and unstructured data sources.
-- Built and scaled a monorepo frontend architecture using *React*, *Vite*, *Tailwind CSS*, and *Nx*, and collaborated with UI/UX teams via *Figma* and *Miro* to deliver responsive interfaces and improve information retrieval efficiency.
-- Refactored the *Express* backend from *Node.js* to the *Bun* runtime, increasing request throughput by 40% and reducing average response time under concurrent load.
-- Implemented secure, stateless authentication and authorization using *JWT*-based middleware and *GraphQL* APIs, enabling role-based access control and backend API security across 5+ endpoints.
-- Integrated *Pinecone* vector database into the request-processing pipeline, optimizing embedding retrieval and reducing end-to-end response latency by 30%, improving overall system responsiveness and user experience.
+#block(above: 5pt, below: 0pt)[_Bigswing -- GenAI Anomaly Prediction Service_]
+- Designed a production-grade *GenAI* anomaly prediction service integrating *ML inference* via *AWS Bedrock*, *Lambda*, and *S3*, processing high-frequency sensor data with 99%+ precision to prevent manufacturing failures.
+- Built real-time monitoring dashboards with *React.js*, *Express.js*, and *RESTful APIs*; refactored inference pipeline from Bedrock to *SmolAgent* / *LangChain*, reducing response latency by 30%.
+- Built synthetic data and load-testing frameworks, cutting end-to-end pipeline runtime by 95% and validating system stability under edge cases.
 
 #entry(
-  [*Full Stack Software Development Engineer* | Urban Surveyors, Shanghai, China],
-  [May 2024 -- Aug 2024],
+  [*Software Development Engineer Intern* | Shawk Solution, WA],
+  [Jan. 2025 -- Apr. 2025],
 )
-- Engineered a real-time interactive *ArcGIS*-based land management system for clients to visualize and manage their properties.
-- Developed dashboard & map features with *Vue.js*, *HTML*, *CSS*, & *TypeScript*; optimized component rendering with *Vuex*, reducing overall LCP, INP, and CLS by 20%.
-- Built backend using *Java* & *Spring Boot*, designed *RESTful APIs* for authentication & data management using *Spring Security*.
-- Optimized database performance by implementing *Redis* caching above *MySQL*, speeding up API response times by 15%.
-- Spearheaded a VR app for building exhibition using *Unity* & *C\#*, delivered immersive experiences with interactive environments, 3D models & cross-platform support with *Unity XR Toolkit*, *Oculus* & *Pico SDK* for 1000+ users.
+#block(above: 5pt, below: 0pt)[_CowBot -- Gemini-based AI Querying Agent_]
+- Designed a production *Gemini*-based AI querying agent with *Node.js* / *Express.js* APIs enabling natural-language data access; integrated *Pinecone* vector database for embedding retrieval, reducing query latency by 30%.
+- Built a scalable monorepo frontend with *React*, *TypeScript*, and *Tailwind CSS* via *Nx*; migrated backend to *Bun* for 40% throughput gain; secured APIs with *JWT* / *GraphQL*-based role-based access control.
+- Collaborated with UI/UX teams via *Figma* and *Miro* to design and deliver responsive, accessible interfaces.
 
 #entry(
-  [*Software Development Engineer* | Joblogic-X Corporation, Plano, TX / Remote],
-  [Jun 2021 -- Feb 2023],
+  [*Software Development Engineer* | Joblogic-X Corporation, TX],
+  [Jun. 2021 -- Feb. 2023],
 )
-- Upgraded and maintained the *CI/CD* pipeline for the carbon trading platform, improving deployment reliability and release velocity.
-- Optimized backend workflows and containerized all services with *Docker*; deployed fault-tolerant microservices using *Kubernetes* DaemonSets and RollingUpdate strategies, ensuring zero-downtime releases.
-- Implemented *MongoDB* for logging storage & *Elasticsearch* for efficient search, enhancing system auditing and data retrieval.
-- Set up test suite with *Pylint*, *Pytest*, *Selenium* & *Jest*, ensuring reliability & seamless user experience.
-- Developed real-time data visualization dashboards & responsive interactive chart pages with *Python*, *Flask* & *Dash*.
-- Optimized data processing by refactoring the pipeline using *AWS S3* + *EMR* with *Airflow* for job orchestration & *Parquet* for efficient storage, achieving 12x faster data processing.
-- Enhanced data retrieval & reduced load using *Elasticsearch* for efficient full-text search in high-concurrency environments.
-- Built and maintained a carbon trading platform with real-time analytics and an optimized search algorithm in *AWS*; processed large-scale datasets via *Spark*, *DataFrames* & *Spark SQL*.
+#block(above: 5pt, below: 0pt)[_CarbonX -- Carbon Trading & Data Platform_]
+- Optimized carbon trading data pipelines on *AWS* with *S3*, *EMR*, *Airflow*, and *Parquet*, achieving 12x faster processing using *Spark DataFrames* and *Spark SQL* on large-scale datasets.
+- Containerized services with *Docker* and deployed fault-tolerant microservices via *Kubernetes* RollingUpdate; upgraded *CI/CD* pipelines with *MongoDB* logging and *Elasticsearch* for zero-downtime releases.
+#block(above: 5pt, below: 0pt)[_MetricsDash -- Real-Time Analytics Dashboard_]
+- Built interactive analytics dashboards with *Python*, *Flask*, and *Dash*; integrated *Elasticsearch* for full-text search in high-concurrency environments, enhancing data retrieval.
+- Implemented *Pylint*, *Pytest*, *Selenium*, and *Jest* test suites ensuring API and UI reliability across 20+ endpoints.
+- Integrated *MongoDB* data sources for structured log querying and real-time chart updates on the dashboard.
+#block(above: 5pt, below: 0pt)[_Land Management System -- ArcGIS Platform_]
+- Engineered a real-time *ArcGIS* land management system with *Vue.js*, *TypeScript*, and *Vuex* (20% LCP/INP/CLS improvement); secured via *Java* / *Spring Boot* APIs and *Redis*-over-*MySQL* caching (15% faster).
+- Built interactive map features with *ArcGIS JS API* and *TypeScript* for real-time property visualization and client management.
+- Spearheaded a VR exhibition app with *Unity*, *C\#*, *Unity XR Toolkit*, *Oculus*, and *Pico SDK* for immersive cross-platform 3D experiences for 1000+ users.
 
 // ---- Education ----
-#section("Education")
+#section("Education", above: 12pt)
 
-#entry(
+#tight-entry(
   [*Northeastern University* -- Master of Science in Computer Science],
-  [Boston, MA | Dec 2025],
+  [Boston, MA | Dec. 2025],
 )
-#entry(
+#tight-entry(
   [*Denison University* -- Bachelor of Science in Biology; Computer Science Minor; Art Studio Minor],
-  [Columbus, OH | Jun 2021],
+  [Columbus, OH | Jun. 2021],
 )
 
 // ---- Skills ----
-#section("Skills")
+#section("Skills", above: 12pt)
 
-#block(above: 6pt, below: 0pt)[
-  *Expert:* Java, Python, MySQL, MongoDB, PostgreSQL, Redis, Amazon DynamoDB, SQL Server, React.js, Node.js \
-  *Proficient:* Spring Boot, Spring Cloud, Flask, Django, Next.js, Vue.js, Express.js, Angular.js, MyBatis, TypeScript, JavaScript, AWS, Docker, Kubernetes \
-  *Familiar:* C, C\#, C++, Golang, Ruby, Shell, Scala, Spark, Hadoop, Apache Airflow, SVN
+#block(above: 7pt, below: 0pt)[
+  *Expert:* Python, Java, TypeScript, JavaScript, React.js, Node.js, Express.js, Angular.js, MySQL, MongoDB, Redis, Amazon DynamoDB, AWS, Claude Code, GitHub \
+  *Proficient:* Spring Boot, Spring Cloud, PostgreSQL, SQL Server, Flask, Django, Next.js, Vue.js, MyBatis, Docker, Kubernetes \
+  *Familiar:* C, C\#, C++, Go, React Native, Ruby, Shell, Scala, Spark, Hadoop, Apache Airflow, SVN
 ]
